@@ -24,7 +24,7 @@ return new class extends Migration
             $table->boolean('fl_ingresso')->default(false);
             $table->boolean('fl_gratis')->default(false);
             $table->boolean('fl_ativo')->default(true);
-            $table->foreignId('fk_local')->constrained('local_evento');
+            $table->foreignId('fk_local')->nullable();
             $table->foreignId('fk_usuario_aprovacao')->constrained('usuario');
             $table->timestamps();
         });

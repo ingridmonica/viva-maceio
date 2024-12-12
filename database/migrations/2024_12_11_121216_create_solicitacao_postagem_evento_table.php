@@ -23,8 +23,8 @@ return new class extends Migration
             $table->date('data_fim')->nullable();
             $table->boolean('fl_ingresso')->default(false);
             $table->boolean('fl_gratis')->default(false);
-            $table->boolean('fl_ativo')->default(true);
-            $table->foreignId('fk_local')->constrained('solicitacao_local_evento');
+            $table->boolean(column: 'fl_ativo')->default(true);
+            $table->foreignId('fk_local')->nullable();
             $table->foreignId('fk_status')->constrained('status_solicitacao_evento');
             $table->timestamps();
         });
