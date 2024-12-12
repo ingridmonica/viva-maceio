@@ -14,12 +14,12 @@ class CategoriaEventoSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('categorias_evento')->insert([
-            ['nome' => 'Música', 'descricao' => 'Shows, festivais e apresentações musicais.'],
-            ['nome' => 'Teatro', 'descricao' => 'Peças teatrais e eventos culturais.'],
-            ['nome' => 'Gastronomia', 'descricao' => 'Eventos relacionados à culinária e gastronomia.'],
-            ['nome' => 'Esportes', 'descricao' => 'Competições, torneios e eventos esportivos.'],
-            ['nome' => 'Exposições', 'descricao' => 'Exibições artísticas, científicas e culturais.'],
+        DB::table('categoria_evento')->insert([
+            ['nome' => 'Música'],
+            ['nome' => 'Teatro'],
+            ['nome' => 'Gastronomia'],
+            ['nome' => 'Esportes'],
+            ['nome' => 'Exposições'],
         ]);
     }
 }
