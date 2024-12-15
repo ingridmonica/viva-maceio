@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::table('solicitacao_postagem_evento', function (Blueprint $table) {
             $table->foreign('fk_local')->references('id')->on('solicitacao_local_evento');
+            $table->foreign('fk_usuario_solicitante')->references('id')->on('usuario');
         });
     }
 
