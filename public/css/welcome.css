@@ -1,0 +1,122 @@
+/* Configurações globais */
+.container-homepage {
+    font-family: "Montserrat", sans-serif;
+    padding: 2rem;
+    color: var(--cor-texto);
+}
+
+.titulo-secao {
+    font-size: 2rem;
+    color: var(--cor-texto);
+    margin: 1.5rem 0rem;
+}
+
+/* Eventos em destaque */
+.container-eventos-destaque .evento-destaque {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.evento-card.destaque {
+    display: flex;
+    padding: 2rem;
+    gap: 1rem;
+    align-items: center;
+}
+
+.evento-card .imagem-placeholder {
+    background-color: var(--cor-borda);
+    height: 200px;
+    flex: 1;
+    border-radius: 5px;
+}
+
+.evento-card .evento-conteudo {
+    flex: 1;
+}
+
+.evento-conteudo .titulo-evento {
+    font-size: 1.5rem;
+    color: var(--cor-texto);
+    margin-bottom: 0.5rem;
+}
+
+.evento-conteudo .data-evento {
+    font-size: 0.9rem;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 1rem;
+}
+.evento-conteudo .descricao-evento {
+    font-size: 0.9rem;
+    color: var(--cor-texto);
+    margin-bottom: 1rem;
+}
+
+.botao-saiba-mais {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--cor-rosa-padrao);
+    color: var(--cor-branco);
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.botao-saiba-mais:hover {
+    background-color: var(--cor-rosa-hover);
+}
+
+/* Próximos eventos */
+.grid-eventos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.evento-card {
+    background-color: var(--cor-branco);
+    /* border: 1px solid var(--cor-borda); */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.evento-card .imagem-placeholder {
+    background-color: var(--cor-borda);
+    height: 250px;
+}
+
+.evento-card .evento-conteudo {
+    padding: 2rem;
+}
+
+/* Categorias */
+.titulo-secao.categorias {
+    text-align: center;
+}
+
+.container-categorias .descricao-categorias {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.grid-categorias {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    justify-items: center;
+}
+
+.grid-categorias .imagem-placeholder {
+    background-color: var(--cor-borda);
+    height: 100px;
+    width: 100px;
+}
+
+/* Divulgue seu evento */
+.divulgue-evento {
+    background-color: var(--cor-borda);
+    text-align: center;
+    padding: 3rem 0;
+    margin-top: 2rem;
+}
