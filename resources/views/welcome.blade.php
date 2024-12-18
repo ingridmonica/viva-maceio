@@ -1,10 +1,5 @@
-@extends('layouts.header')
-<link rel="stylesheet" href="{{ asset('css/welcome.css')}}">
-
-@section('conteudo-pagina')
-
+<x-guest-layout title="Bem-vindo">
 <section class="container-homepage">
-
     <!-- Eventos em destaque -->
     <section class="container-eventos-destaque">
         <h1 class="titulo-secao">Eventos em destaque</h1>
@@ -70,5 +65,4 @@
     </section>
 
 </section>
-
-@endsection
+</x-guest-layout>

@@ -53,6 +53,6 @@
     width: 50%;
     display: flex;
     justify-content: end;
-    height: 39%;
     padding-right: 2rem;
+    margin-block-end: 0rem;
 }
