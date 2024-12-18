@@ -22,3 +22,11 @@
 ## 🧑‍💻 Equipe de Desenvolvimento
 - **Ingrid Mônica**
 - **Karla Cristina**
+- 
+## Comandos para rodar o projeto
+- composer e npm install
+- cp env example .env
+- migrate
+- generate key
+- npm run dev
+- php artisan serve
