@@ -10,8 +10,7 @@
                         <div class="evento-conteudo">
                             <h2 class="titulo-evento">{{ $evento->titulo }}</h2>
                             <p class="descricao-evento">{{ $evento->descricao }}</p>
-                            {{--<a href="{{ route('eventos.show', $evento->id) }}" class="botao-saiba-mais">Saiba mais</a>--}}
-                            <a href="" class="botao-saiba-mais">Saiba mais</a>
+                            <a href="{{ route('eventos.show', $evento->id) }}" class="botao-saiba-mais">Saiba mais</a>
                         </div>
                     </div>
                 @endforeach
@@ -30,8 +29,7 @@
                             <h2 class="titulo-evento">{{ $evento->titulo }}</h2>
                             <p class="data-evento">{{ $evento->data_inicio->format('d/m/Y') }} - {{ $evento->data_fim->format('d/m/Y') }} </p>
                             <p class="descricao-evento">{{ $evento->descricao }}</p>
-                            {{--<a href="{{ route('eventos.show', $evento->id) }}" class="botao-saiba-mais">Saiba mais</a>--}}
-                            <a href="" class="botao-saiba-mais">Saiba mais</a>
+                            <a href="{{ route('eventos.show', $evento->id) }}" class="botao-saiba-mais">Saiba mais</a>
                         </div>
                     </div>
                 @endforeach
@@ -41,8 +39,7 @@
         <!-- Categorias -->
         <section class="container-categorias">
             <h1 class="titulo-secao categorias">Categorias</h1>
-            <p class="descricao-categorias">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore</p>
+            <p class="descricao-categorias">Explore as diversas categorias de eventos disponíveis na plataforma.</p>
             <div class="grid-categorias">
                 @foreach ($categorias as $categoria)
                     <div class="categoria-item">
