@@ -20,6 +20,11 @@ class CategoriaEventoSeeder extends Seeder
             ['nome' => 'Gastronomia'],
             ['nome' => 'Esportes'],
             ['nome' => 'Exposições'],
+            ['nome' => 'Tecnologia'],
+            ['nome' => 'Educação'],
+            ['nome' => 'Artes'],
+            ['nome' => 'Cinema'],
+            ['nome' => 'Games'],
         ]);
     }
 }
