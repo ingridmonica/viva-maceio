@@ -32,7 +32,7 @@
                     <input type="date" name="data_hora_fim" class="campo-filtro" value="{{ request('data_hora_fim') }}" />
 
                     <!-- Botão de Aplicar Filtro -->
-                    <button type="submit" class="botao-saiba-mais">Filtrar</button>
+                    <button type="submit" class="botao-saiba-mais btn">Filtrar</button>
                 </div>
             </form>
         </section>
@@ -42,7 +42,7 @@
             <h1 class="titulo-secao">Eventos</h1>
 
             @if($eventos->count())
-                <div class="grid-eventos-sm">
+                <div class="grid-eventos">
                     @foreach ($eventos as $evento)
                         <div class="evento-card">
                             <img src="{{ $evento->imagem }}" alt="Imagem do Evento" class="imagem-placeholder" />

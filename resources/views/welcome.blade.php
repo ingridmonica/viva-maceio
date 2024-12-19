@@ -24,7 +24,7 @@
         <!-- Próximos eventos -->
         <section class="container-proximos-eventos">
             <h1 class="titulo-secao">Próximos eventos</h1>
-            <div class="grid-eventos-sm">
+            <div class="grid-eventos">
                 @foreach ($proximosEventos as $evento)
                     <div class="evento-card">
 
