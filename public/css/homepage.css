@@ -120,3 +120,22 @@
     padding: 3rem 0;
     margin-top: 2rem;
 }
+
+.container-filtros {
+    margin: 20px 0;
+}
+
+.campo-filtro {
+    margin-right: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+.nenhum-evento {
+    text-align: center;
+    color: #777;
+    font-size: 1.2rem;
+}
+

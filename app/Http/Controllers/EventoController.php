@@ -31,4 +31,34 @@ class EventoController extends Controller
 
         return redirect()->route('home')->with('success', 'Evento criado com sucesso!');
     }
+
+    public function listar(Request $request)
+    {
+        $query = Evento::query();
+
+        if ($request->has('titulo') && $request->input('titulo') != '') {
+            $query->where('titulo', 'like', '%' . $request->input('titulo') . '%');
+        }
+
+        if ($request->has('categoria') && $request->input('categoria') != '') {
+            $query->whereHas('categorias', function ($q) use ($request) {
+                $q->where('nome', $request->input('categoria'));
+            });
+        }
+
+        if ($request->has('data_inicio') && $request->input('data_inicio') != '') {
+            $query->where('data_inicio', '>=', $request->input('data_inicio'));
+        }
+
+        if ($request->has('data_fim') && $request->input('data_fim') != '') {
+            $query->where('data_fim', '<=', $request->input('data_fim'));
+        }
+
+        $eventos = $query->get();
+
+        $categorias = Categoria::all();
+
+        return view('evento.listar', compact('eventos', 'categorias'));
+    }
+
 }

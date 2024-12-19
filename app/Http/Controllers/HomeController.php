@@ -14,7 +14,7 @@ class HomeController extends Controller
 
         $eventosDestaque = Evento::where('fl_destaque', true)->take(2)->get();
 
-        $proximosEventos = Evento::where('data_fim', '>=', now())->orderBy('data_inicio', 'asc')->take(6)->get();
+        $proximosEventos = Evento::where('data_fim', '>=', now())->where('fl_destaque', false)->orderBy('data_inicio', 'asc')->take(6)->get();
 
         $categorias = Categoria::all();
 

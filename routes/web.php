@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
+Route::get('/eventos', [EventoController::class, 'listar'])->name('eventos.listar');
+
 Route::get('/eventos/{evento}', [EventoController::class, 'show'])->name('eventos.show');
 
 Route::get('/dashboard', function () {
