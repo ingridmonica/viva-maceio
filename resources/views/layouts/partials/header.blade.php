@@ -1,4 +1,3 @@
-<!-- resources/views/layouts/partials/header.blade.php -->
 <header class="header">
     <div class="div-itens-nav">
         <a href="{{ route('welcome') }}">
@@ -14,7 +13,7 @@
         @auth
             <!-- Dropdown para usuários logados -->
             <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <button class="btn btn-usuario dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     {{ Auth::user()->name }}
                 </button>
                 <ul class="dropdown-menu">
@@ -34,24 +33,3 @@
         @endauth
     </div>
 </header>
-
-  {{-- Usar ou não...
-            @if (Route::has('login'))
-            <nav class="-mx-3 flex flex-1 justify-end">
-                @auth
-                    <a href="{{ url('/dashboard') }}">
-                        Dashboard
-                    </a>
-                @else
-                    <a href="{{ route('login') }}">
-                        Log in
-                    </a>
-
-                    @if (Route::has('register'))
-                        <a href="{{ route('register') }}">
-                            Register
-                        </a>
-                    @endif
-                @endauth
-            </nav> 
-        @endif --}}

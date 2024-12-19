@@ -7,6 +7,9 @@
     height: 72px;
     background-color: var(--cor-branco);
 }
+.logo{
+    height: 30px;
+}
 .div-itens-nav{
     width: 60%;
     display: flex;
@@ -19,6 +22,13 @@
     letter-spacing: -0.008em;
     color: var(--cor-rosa-padrao);
     text-decoration: none;
+}
+.container-btn-login{
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    padding-right: 1.7rem;
+    margin-bottom: 0px;
 }
 .loc-nav{
     margin: 0px 9px;
@@ -40,21 +50,18 @@
     background: var(--cor-rosa-hover);
     color: var(--cor-branco);
 }
-.logo{
-    height: 30px;
+.btn-usuario{
+    background-color: none;
+    color: var(--cor-rosa-hover);
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
 }
-.container-login-cont{
-    display: flex;
-    justify-content: center;
-    padding: 5.3rem;
+.btn-usuario:hover{
+    border: 1px solid var(--cor-rosa-hover);
+    color: var(--cor-rosa-hover);
 }
-.conteudo{
+.dropdown-item:hover{
     background-color: var(--cor-rosa-claro);
-}
-.container-btn-login{
-    width: 50%;
-    display: flex;
-    justify-content: end;
-    padding-right: 1.7rem;
-    margin-bottom: 0px;
+    color: var(--cor-texto);
 }
