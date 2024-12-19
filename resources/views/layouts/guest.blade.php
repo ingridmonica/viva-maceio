@@ -19,13 +19,11 @@
 
         <!-- CSS -->
         <link rel="stylesheet" href="{{ asset('css/layouts/guest.css')}}">
-        <link rel="stylesheet" href="{{ asset('css/homepage.css')}}">
         <link rel="stylesheet" href="{{ asset('css/cores-padrao.css')}}">
         <link rel="stylesheet" href="{{ asset('css/layouts/header.css')}}">
+        <link rel="stylesheet" href="{{ asset('css/layouts/footer.css')}}">
+        @yield('styles')
 
-        <link rel="stylesheet" href="{{ asset('css/login.css')}}">
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}"> {{-- DEIXAR OU NÃO --}} 
-        @stack('styles')
     </head>
 
     
@@ -39,6 +37,6 @@
         @include('layouts.partials.footer')
 
         <script src="{{ asset('js/app.js') }}"></script>
-        @stack('scripts')
+        @yield('scripts')
     </body>
 </html>

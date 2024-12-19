@@ -1,3 +1,7 @@
+@section('styles')
+<link rel="stylesheet" href="{{ asset('css/login.css')}}">
+@endsection
+
 <x-guest-layout>
     <div class="container-sm container-login-cont">
         <!-- Session Status -->
@@ -32,9 +36,9 @@
                 </div>
             </form>
             <form method="GET" action="{{ route('register') }}">
-                <div class="container-cadastro">
+                <div class="container-cadastre">
                     <span class="text-comum">{{ __('Ainda não tem conta?') }}</span>          
-                    <button class="btn btn-cadastro">
+                    <button class="btn btn-cadastre">
                         {{ __('Cadastre-se') }}
                     </button>
                 </div>
