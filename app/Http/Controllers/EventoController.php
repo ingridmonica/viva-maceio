@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Categoria;
 use App\Models\Evento;
 use App\Models\LocalEvento;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class EventoController extends Controller
@@ -30,6 +31,21 @@ class EventoController extends Controller
         $evento->categorias()->sync($request->categorias);
 
         return redirect()->route('home')->with('success', 'Evento criado com sucesso!');
+    }
+
+    public function listarHoje(Request $request)
+    {
+        $query = Evento::query();
+
+        $query->where('data_hora_inicio', '<=', Carbon::now());
+
+        $query->where('data_hora_fim', '>=', Carbon::now());
+
+        $eventos = $query->get();
+
+        $categorias = Categoria::all();
+
+        return view('evento.listar', compact('eventos', 'categorias'));
     }
 
     public function listar(Request $request)
