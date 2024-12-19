@@ -6,6 +6,7 @@
     <section class="container-homepage">
         <!-- Filtros de busca -->
         <section class="container-filtros">
+            <h1 class="titulo-secao">Filtros</h1>
             <form action="{{ route('eventos.listar') }}" method="GET">
                 <div class="filtros">
                     <!-- Filtro de Título -->
@@ -41,7 +42,7 @@
             <h1 class="titulo-secao">Eventos</h1>
 
             @if($eventos->count())
-                <div class="grid-eventos">
+                <div class="grid-eventos-sm">
                     @foreach ($eventos as $evento)
                         <div class="evento-card">
                             <img src="{{ $evento->imagem }}" alt="Imagem do Evento" class="imagem-placeholder" />

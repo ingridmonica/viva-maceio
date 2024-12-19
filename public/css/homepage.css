@@ -73,6 +73,12 @@
     gap: 2rem;
 }
 
+.grid-eventos-sm {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
 .evento-card {
     background-color: var(--cor-branco);
     /* border: 1px solid var(--cor-borda); */

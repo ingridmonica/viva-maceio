@@ -3,9 +3,9 @@
         <a href="{{ route('home') }}">
             <img class="logo" src="{{ asset('img/logo.png') }}" alt="logo viva maceió">
         </a>
-        <a href="{{ route('home') }}" class="item-nav">Todos os eventos</a>
-        <a href="#" class="item-nav">Hoje</a>
-        <a href="#" class="item-nav">Próximos</a>
+        <a href="{{ route('eventos.listar') }}" class="item-nav">Todos os eventos</a>
+        <a href="{{ route('eventos.listar') }}" class="item-nav">Hoje</a>
+        <a href="{{ route('eventos.listar') }}" class="item-nav">Próximos</a>
         <a href="{{ route('login') }}" class="item-nav">Divulgue seu evento</a>
     </div>
 
