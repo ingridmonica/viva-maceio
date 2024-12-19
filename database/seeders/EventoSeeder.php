@@ -65,7 +65,6 @@ class EventoSeeder extends Seeder
                 'fk_usuario_aprovacao' => null,
                 'fk_solicitacao_evento' => null,
             ],
-            // Adicione mais eventos...
         ];
 
         $eventoIds = [];

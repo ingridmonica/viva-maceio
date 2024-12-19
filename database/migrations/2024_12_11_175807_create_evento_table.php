@@ -25,11 +25,12 @@ return new class extends Migration
             $table->boolean('fl_gratis')->default(false);
             $table->boolean('fl_ativo')->default(true);
             $table->foreignId('fk_local')->nullable();
-            $table->unsignedBigInteger('fk_solicitacao_evento')->nullable(); 
-            $table->foreign('fk_solicitacao_evento')->references('id')->on('solicitacao_postagem_evento')->onDelete('set null'); 
-            $table->unsignedBigInteger('fk_usuario_aprovacao')->nullable(); 
-            $table->foreign('fk_usuario_aprovacao')->references('id')->on('usuario')->onDelete('set null'); 
-            
+            $table->unsignedBigInteger('fk_solicitacao_evento')->nullable();
+            $table->foreign('fk_solicitacao_evento')->references('id')->on('solicitacao_postagem_evento')->onDelete('set null');
+            $table->unsignedBigInteger('fk_usuario_aprovacao')->nullable();
+            $table->foreign('fk_usuario_aprovacao')->references('id')->on('usuario')->onDelete('set null');
+            $table->timestamps();
+
         });
     }
 
