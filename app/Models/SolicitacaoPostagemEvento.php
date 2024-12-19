@@ -41,4 +41,10 @@ class SolicitacaoPostagemEvento extends Model
     {
         return $this->belongsTo(StatusSolicitacaoEvento::class, 'fk_status');
     }
+
+    public function categorias()
+    {
+        return $this->belongsToMany(Categoria::class, 'solicitacao_categorias', 'fk_solicitacao_evento', 'fk_categoria');
     }
+
+}
