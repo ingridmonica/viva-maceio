@@ -1,3 +1,7 @@
+@section('styles')
+<link rel="stylesheet" href="{{ asset('css/homepage.css')}}">
+@endsection
+
 <x-guest-layout title="Bem-vindo">
     <section class="container-homepage">
         <!-- Eventos em destaque -->

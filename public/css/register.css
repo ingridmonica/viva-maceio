@@ -1,19 +1,23 @@
-.container-login-cont{
+.container-cadastro-cont{
     display: flex;
     justify-content: center;
-    padding: 2.5rem 0rem 1.5rem 0rem;
+    padding: 1.7rem;
 }
-.container-login{
+.container-cadastro{
     background-color: #fff;
     border: 1px solid #000;
     border-radius: 5px;
     width: 580px;
-    height: 420px;
+    height: 435px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    gap: 3rem;
+    gap: 1rem;
+}
+.form-cadastro{
+    display: flex;
+    flex-direction: column;
 }
 .titulo{
     font-weight: 700;
@@ -21,11 +25,15 @@
     line-height: 36px;
     color: #000000;
 }
-.text-senha{
+.text-possui-registro{
     text-decoration: none;
     color: #A13379;
 }
-.btn.btn-entrar{
+.text-possui-registro:hover{
+    text-decoration: underline;
+    color: #A13379;
+}
+.btn.btn-cadastro{
     width: 125px;
     height: 36px;
     font-size: 15.9px;
@@ -38,30 +46,7 @@
     text-transform: uppercase;
     font-weight: 500;
 }
-.btn.btn-entrar:hover{
+.btn.btn-cadastro:hover{
     background: #A13379;
     color: #fff;
-}
-.btn-cadastre{
-    width: 147px;
-    height: 30px;
-    font-size: 15.6px;
-    border: 1px solid var(--cor-rosa-secundaria);
-    border-radius: 6px;
-    color: var(--cor-rosa-secundaria);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
-    font-weight: 500;
-}
-.btn.btn-cadastre:hover{
-    background: #A13379;
-    color: #fff;
-}
-.container-cadastre{
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    margin-top: -10px;
 }
