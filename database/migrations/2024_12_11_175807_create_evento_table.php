@@ -30,7 +30,6 @@ return new class extends Migration
             $table->unsignedBigInteger('fk_usuario_aprovacao')->nullable();
             $table->foreign('fk_usuario_aprovacao')->references('id')->on('usuario')->onDelete('set null');
             $table->timestamps();
-
         });
     }
 
