@@ -57,7 +57,7 @@
         <!-- Divulgue seu evento -->
         <section class="divulgue-evento">
             <h1 class="titulo-secao">Divulgue seu evento!</h1>
-            {{-- <a href="{{ route('eventos.create') }}" class="botao-saiba-mais">Cadastrar</a> --}}
+            <a href="" class="botao-saiba-mais">Cadastrar</a>
         </section>
     </section>
 </x-guest-layout>
