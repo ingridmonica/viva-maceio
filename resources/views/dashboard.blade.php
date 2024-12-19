@@ -3,12 +3,26 @@
 @endsection
 
 <x-app-layout>
+    @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <div class="container-adicionar-eventos">
-        <h2 class="titulo-secao">Divulgue seu evento conosco</h2>
-        <span class="subtitulo-secao">Envie uma solicitação de postagem de evento para analisarmos</span>
-        
+        <h2 class="titulo-secao">Cadastrar evento</h2>
+
         <div class="container-cadastro-evento">
-            <form action="" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('eventos.novo') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <h3 class="titulo">Informações do Evento</h3>
@@ -35,8 +49,8 @@
                         <input type="number" id="idade_minima" name="idade_minima" class="input-padrao-evento" >
                     </div>
                     <div>
-                        <label for="imagem" class="text-comum">Imagem do Evento</label>
-                        <input type="file" id="imagem" name="imagem" class="input-padrao-evento imagem">
+                        <label for="imagem" class="text-comum">Link da imagem do Evento</label>
+                        <input type="url" id="imagem" name="imagem" class="input-padrao-evento imagem">
                     </div>
                     <div class="full-width">
                         <input type="url" id="link" name="link" class="input-padrao-evento" placeholder="Link para mais informações">
@@ -45,11 +59,13 @@
 
                 <div class="form-grid mt-2">
                     <div class="form-check">
-                        <input type="checkbox" id="fl_ingresso" name="fl_ingresso" class="form-check-input">
+                        <input type="hidden" name="fl_ingresso" value="0">
+                        <input type="checkbox" name="fl_ingresso" value="1" {{ old('fl_ingresso') ? 'checked' : '' }}>
                         <label for="fl_ingresso" class="form-check-label">Necessário a compra de ingresso</label>
                     </div>
                     <div class="form-check">
-                        <input type="checkbox" id="fl_gratis" name="fl_gratis" class="form-check-input">
+                        <input type="hidden" name="fl_gratis" value="0">
+                        <input type="checkbox" name="fl_gratis" value="1" {{ old('fl_gratis') ? 'checked' : '' }}>
                         <label for="fl_gratis" class="form-check-label">Gratuito</label>
                     </div>
                 </div>

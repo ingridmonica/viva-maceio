@@ -17,9 +17,14 @@ class Evento extends Model
         'titulo',
         'idade_minima',
         'descricao',
+        'data_hora_inicio',
+        'data_hora_fim',
         'link',
         'imagem',
         'nome_organizador',
+        'fl_ingresso',
+        'fl_gratis',
+        'fk_local',
     ];
 
     protected $casts = [
