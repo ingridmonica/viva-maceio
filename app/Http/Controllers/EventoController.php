@@ -46,12 +46,12 @@ class EventoController extends Controller
             });
         }
 
-        if ($request->has('data_inicio') && $request->input('data_inicio') != '') {
-            $query->where('data_inicio', '>=', $request->input('data_inicio'));
+        if ($request->has('data_hora_inicio') && $request->input('data_hora_inicio') != '') {
+            $query->where('data_hora_inicio', '>=', $request->input('data_hora_inicio'));
         }
 
-        if ($request->has('data_fim') && $request->input('data_fim') != '') {
-            $query->where('data_fim', '<=', $request->input('data_fim'));
+        if ($request->has('data_hora_fim') && $request->input('data_hora_fim') != '') {
+            $query->where('data_hora_fim', '<=', $request->input('data_hora_fim'));
         }
 
         $eventos = $query->get();
