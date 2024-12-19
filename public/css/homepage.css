@@ -12,15 +12,19 @@
     align-items: center;
 }
 
-.evento-card .imagem-placeholder {
+.evento-card.destaque .imagem-placeholder {
     background-color: var(--cor-borda);
-    height: 200px;
+    height: auto;
+    max-height: 300px;
     flex: 1;
     border-radius: 5px;
+    object-fit: cover;
+    width: 570px;
 }
 
 .evento-card .evento-conteudo {
     flex: 1;
+    margin: 0rem 1rem 1rem 1rem;
 }
 
 .evento-conteudo .titulo-evento {
@@ -34,6 +38,7 @@
     color: var(--cor-texto-secundario);
     margin-bottom: 1rem;
 }
+
 .evento-conteudo .descricao-evento {
     font-size: 0.9rem;
     color: var(--cor-texto);
@@ -61,20 +66,20 @@
 }
 
 .evento-card {
+    padding: 1rem;
     background-color: var(--cor-branco);
-    /* border: 1px solid var(--cor-borda); */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
 .evento-card .imagem-placeholder {
+    margin: 1rem;
     background-color: var(--cor-borda);
-    height: 250px;
-}
-
-.evento-card .evento-conteudo {
-    padding: 2rem;
+    width: 535px;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
 /* Categorias */
@@ -89,7 +94,7 @@
 
 .grid-categorias {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 1rem;
     justify-items: center;
 }
@@ -98,6 +103,12 @@
     background-color: var(--cor-borda);
     height: 100px;
     width: 100px;
+    object-fit: cover; /* Garante que a imagem não distorça */
+    border-radius: 50%; /* Estilo circular */
+}
+
+.categoria-item{
+    text-align: center;
 }
 
 /* Divulgue seu evento */
