@@ -9,7 +9,7 @@
             <h1 class="titulo-secao">{{ $evento->titulo }}</h1>
             <div class="evento-destaque">
                 <div class="evento-card destaque">
-                    <img src="{{ $evento->imagem }}" alt="Imagem" class="imagem-placeholder" />
+                    <img src="{{ $evento->imagem }}" alt="Imagem" class="imagem-evento" />
                 </div>
             </div>
 
