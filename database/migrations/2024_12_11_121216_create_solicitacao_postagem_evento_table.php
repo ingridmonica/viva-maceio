@@ -19,6 +19,7 @@ return new class extends Migration
             $table->text('descricao')->nullable();
             $table->string('link')->nullable();
             $table->string('imagem')->nullable();
+            $table->string('nome_organizador');
             $table->timestamp('data_hora_inicio')->nullable();
             $table->timestamp('data_hora_fim')->nullable();
             $table->boolean('fl_ingresso')->default(false);

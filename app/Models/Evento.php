@@ -23,8 +23,8 @@ class Evento extends Model
     ];
 
     protected $casts = [
-        'data_inicio' => 'datetime',
-        'data_fim' => 'datetime',
+        'data_hora_inicio' => 'datetime',
+        'data_hora_fim' => 'datetime',
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
         'fl_ingresso' => 'boolean',
