@@ -1,16 +1,3 @@
-/* Configurações globais */
-.container-homepage {
-    font-family: "Montserrat", sans-serif;
-    padding: 2rem;
-    color: var(--cor-texto);
-}
-
-.titulo-secao {
-    font-size: 2rem;
-    color: var(--cor-texto);
-    margin: 1.5rem 0rem;
-}
-
 /* Eventos em destaque */
 .container-eventos-destaque .evento-destaque {
     display: flex;

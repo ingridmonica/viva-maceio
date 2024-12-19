@@ -4,14 +4,25 @@
 .container-lg{
     min-height: 67vh;
 }
+.container-homepage {
+    font-family: "Montserrat", sans-serif;
+    padding: 2rem;
+    color: var(--cor-texto);
+}
+.titulo-secao {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    color: var(--cor-texto);
+    margin: 1.5rem 0rem;
+}
+.text-comum{
+    text-decoration: none;
+    color: #1B0814;
+}
 .input-padrao{
     border: 1px solid #000;
     border-radius: 5px;
     height: 38.7px;
     width: 380px;
     padding: 10px;
-}
-.text-comum{
-    text-decoration: none;
-    color: #1B0814;
 }
