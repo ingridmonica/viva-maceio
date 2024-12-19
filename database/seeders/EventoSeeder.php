@@ -37,8 +37,8 @@ class EventoSeeder extends Seeder
                 'link' => 'https://techconference2024.com',
                 'imagem' => 'https://www.euax.com.br/wp-content/uploads/2024/08/eventos-de-tecnologia.webp',
                 'nome_organizador' => 'John Doe',
-                'data_inicio' => Carbon::now()->addDays(15),
-                'data_fim' => Carbon::now()->addDays(17),
+                'data_hora_inicio' => Carbon::now()->addDays(15),
+                'data_hora_fim' => Carbon::now()->addDays(17),
                 'fl_ingresso' => true,
                 'fl_gratis' => false,
                 'fl_ativo' => true,
@@ -55,8 +55,8 @@ class EventoSeeder extends Seeder
                 'link' => 'https://esporte.com',
                 'imagem' => 'https://esportividade.com.br/wp-content/uploads/2022/04/maratonasp2022_corredora.jpg',
                 'nome_organizador' => 'Jane Smith',
-                'data_inicio' => Carbon::now()->addDays(20),
-                'data_fim' => Carbon::now()->addDays(20),
+                'data_hora_inicio' => Carbon::now()->addDays(20),
+                'data_hora_fim' => Carbon::now()->addDays(20),
                 'fl_ingresso' => true,
                 'fl_gratis' => false,
                 'fl_ativo' => true,
@@ -65,7 +65,6 @@ class EventoSeeder extends Seeder
                 'fk_usuario_aprovacao' => null,
                 'fk_solicitacao_evento' => null,
             ],
-            // Adicione mais eventos...
         ];
 
         $eventoIds = [];

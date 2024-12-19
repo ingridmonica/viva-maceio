@@ -31,7 +31,7 @@
                         <img src="{{ $evento->imagem }}" alt="Imagem" class="imagem-placeholder" />
                         <div class="evento-conteudo">
                             <h2 class="titulo-evento">{{ $evento->titulo }}</h2>
-                            <p class="data-evento">{{ $evento->data_inicio->format('d/m/Y') }} - {{ $evento->data_fim->format('d/m/Y') }} </p>
+                            <p class="data-evento">{{ $evento->data_hora_inicio->format('d/m/Y') }} - {{ $evento->data_hora_fim->format('d/m/Y') }} </p>
                             <p class="descricao-evento">{{ $evento->descricao }}</p>
                             <a href="{{ route('eventos.show', $evento->id) }}" class="botao-saiba-mais">Saiba mais</a>
                         </div>
