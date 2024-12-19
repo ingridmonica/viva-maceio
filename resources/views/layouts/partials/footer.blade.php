@@ -6,7 +6,7 @@
     <div class="footer-content">
         <!-- Logo -->
         <div class="footer-logo">
-            <a href="{{ route('welcome') }}">
+            <a href="{{ route('home') }}">
                 <img class="logo-footer" src="{{ asset('img/logo.png') }}" alt="logo viva maceió">
             </a>
         </div>
