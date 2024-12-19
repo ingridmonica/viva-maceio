@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('local_evento', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('fk_evento')->constrained('evento');
             $table->string('nome');
             $table->string('rua');
             $table->string('cidade');

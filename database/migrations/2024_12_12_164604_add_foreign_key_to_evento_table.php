@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::table('evento', function (Blueprint $table) {
             $table->foreign('fk_local')->references('id')->on('local_evento');
-        });
+        });        
     }
 
     /**

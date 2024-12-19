@@ -14,18 +14,23 @@ return new class extends Migration
         Schema::create('evento', function (Blueprint $table) {
             $table->id();
             $table->string('titulo');
-            $table->date('data');
             $table->string('idade_minima')->nullable();
             $table->text('descricao')->nullable();
             $table->string('link')->nullable();
             $table->string('imagem')->nullable();
+            $table->string('nome_organizador')->nullable();
             $table->timestamp('data_hora_inicio');
             $table->timestamp('data_hora_fim')->nullable();
             $table->boolean('fl_ingresso')->default(false);
             $table->boolean('fl_gratis')->default(false);
             $table->boolean('fl_ativo')->default(true);
             $table->foreignId('fk_local')->nullable();
-            $table->foreignId('fk_usuario_aprovacao')->constrained('usuario');
+            $table->unsignedBigInteger('fk_solicitacao_evento')->nullable();
+            $table->foreign('fk_solicitacao_evento')->references('id')->on('solicitacao_postagem_evento')->onDelete('set null');
+            $table->unsignedBigInteger('fk_usuario_aprovacao')->nullable();
+            $table->foreign('fk_usuario_aprovacao')->references('id')->on('usuario')->onDelete('set null');
+            $table->timestamps();
+
         });
     }
 

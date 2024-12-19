@@ -27,7 +27,7 @@
                 <div class="evento-card">
                     <div class="evento-conteudo">
                         <h2 class="titulo-evento">Quando?</h2>
-                        <p class="descricao-evento">{{ $evento->data_inicio->format('d/m/Y') }} - {{ $evento->data_fim->format('d/m/Y') }}</p>
+                        <p class="descricao-evento">{{ $evento->data_hora_inicio->format('d/m/Y') }} - {{ $evento->data_hora_fim->format('d/m/Y') }}</p>
                     </div>
                 </div>
 
