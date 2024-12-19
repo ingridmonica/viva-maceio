@@ -20,8 +20,7 @@ class EventoController extends Controller
     public function create()
     {
         $categorias = Categoria::all();
-
-       // return view('eventos.create', compact('categorias'));
+        return view('dashboard', compact('categorias'));
     }
 
     public function store(Request $request)
@@ -42,6 +41,8 @@ class EventoController extends Controller
             'local_cidade' => 'required|string|max:255',
             'local_estado' => 'required|string|max:255',
             'local_numero' => 'required|string|max:10',
+            'categorias' => 'required|array',
+            'categorias.*' => 'exists:categoria_evento,id', // Atualizado para refletir o nome correto da tabela
         ]);
 
         // Criar ou associar o local do evento
@@ -52,7 +53,6 @@ class EventoController extends Controller
             'estado' => $validated['local_estado'],
             'numero' => $validated['local_numero'],
         ]);
-
 
         // Criar o evento
         $evento = Evento::create([
@@ -69,8 +69,12 @@ class EventoController extends Controller
             'fk_local' => $local->id,
         ]);
 
+        // Associar as categorias ao evento
+        $evento->categorias()->sync($validated['categorias']); // Associa as categorias
+
         return redirect()->back()->with('success', 'Evento cadastrado com sucesso!');
     }
+
 
 
     public function listarHoje(Request $request)

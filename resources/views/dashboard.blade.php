@@ -36,6 +36,16 @@
                     <div class="full-width">
                         <textarea id="descricao" name="descricao" class="textarea-padrao" rows="3" placeholder="Descrição do Evento"></textarea>
                     </div>
+
+                    <div class="full-width">
+                        <label for="categorias" class="text-comum">Categorias</label>
+                        <select id="categorias" name="categorias[]" class="input-padrao-evento" multiple="multiple">
+                            @foreach ($categorias as $categoria)
+                                <option value="{{ $categoria->id }}">{{ $categoria->nome }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
                     <div>
                         <label for="data_hora_inicio" class="text-comum">Data e Hora Início*</label>
                         <input type="datetime-local" id="data_hora_inicio" name="data_hora_inicio" class="input-padrao-evento" required>
@@ -57,7 +67,7 @@
                     </div>
                 </div>
 
-                <div class="form-grid mt-2">
+                <div class="form-grid mt-3">
                     <div class="form-check">
                         <input type="hidden" name="fl_ingresso" value="0">
                         <input type="checkbox" name="fl_ingresso" value="1" {{ old('fl_ingresso') ? 'checked' : '' }}>
@@ -96,3 +106,13 @@
         </div>
     </div>
 </x-app-layout>
+
+<script>
+    $(document).ready(function () {
+        $('#categorias').select2({
+            placeholder: "Selecione as categorias",
+            allowClear: true
+        });
+    });
+</script>
+

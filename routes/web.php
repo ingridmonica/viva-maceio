@@ -19,9 +19,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/cadastrarEvento', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('cadastroEvento');
+Route::get('/cadastrarEvento', [EventoController::class, 'create'])->middleware(['auth', 'verified'])->name('cadastroEvento');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
