@@ -15,18 +15,17 @@ return new class extends Migration
             $table->id();
             $table->string('titulo');
             $table->date('data');
-            $table->integer('idade_minima')->nullable();
+            $table->string('idade_minima')->nullable();
             $table->text('descricao')->nullable();
             $table->string('link')->nullable();
             $table->string('imagem')->nullable();
-            $table->date('data_inicio')->nullable();
-            $table->date('data_fim')->nullable();
+            $table->timestamp('data_hora_inicio');
+            $table->timestamp('data_hora_fim')->nullable();
             $table->boolean('fl_ingresso')->default(false);
             $table->boolean('fl_gratis')->default(false);
             $table->boolean('fl_ativo')->default(true);
             $table->foreignId('fk_local')->nullable();
             $table->foreignId('fk_usuario_aprovacao')->constrained('usuario');
-            $table->timestamps();
         });
     }
 

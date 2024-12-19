@@ -5,8 +5,7 @@
 ## 📋 Funcionalidades
 
 - **Pesquisar eventos**: Encontre eventos por categoria, data ou localização.
-- **Visualizar detalhes**: Veja informações completas de cada evento, como descrição, data, horário e local.
-- **Favoritar eventos**: Adicione eventos de interesse à sua lista de favoritos.
+- **Visualizar detalhes**: Veja informações completas de cada evento, como descrição, data, horário, local, etc.
 - **Cadastro de eventos**: Organizadores podem adicionar e gerenciar eventos na plataforma.
 
 ## 🔧 Tecnologias Utilizadas
@@ -23,3 +22,11 @@
 ## 🧑‍💻 Equipe de Desenvolvimento
 - **Ingrid Mônica**
 - **Karla Cristina**
+- 
+## Comandos para rodar o projeto
+- composer e npm install
+- cp env example .env
+- migrate
+- generate key
+- npm run dev
+- php artisan serve

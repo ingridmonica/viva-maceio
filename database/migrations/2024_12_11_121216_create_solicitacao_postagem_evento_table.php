@@ -19,13 +19,13 @@ return new class extends Migration
             $table->text('descricao')->nullable();
             $table->string('link')->nullable();
             $table->string('imagem')->nullable();
-            $table->date('data_inicio')->nullable();
-            $table->date('data_fim')->nullable();
+            $table->timestamp('data_hora_inicio')->nullable();
+            $table->timestamp('data_hora_fim')->nullable();
             $table->boolean('fl_ingresso')->default(false);
             $table->boolean('fl_gratis')->default(false);
-            $table->boolean(column: 'fl_ativo')->default(true);
             $table->foreignId('fk_local')->nullable();
             $table->foreignId('fk_status')->constrained('status_solicitacao_evento');
+            $table->foreignId('fk_usuario_solicitante')->nullable();
             $table->timestamps();
         });
     }
